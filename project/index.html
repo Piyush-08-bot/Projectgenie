@@ -1,13 +1,117 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Genie</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <span class="mainlogo" id="mainlogo">
+                <svg width="28" height="28" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M18.4 10.4C17.92 9.97333 17.32 9.65333 16.6 9.44C15.88 9.2 15.1733 9.08 14.48 9.08C13.7067 9.08 13 9.22667 12.36 9.52C11.72 9.78667 11.16 10.1733 10.68 10.68C10.2267 11.16 9.86667 11.7467 9.6 12.44C9.33333 13.1333 9.2 13.88 9.2 14.68C9.2 15.48 9.34667 16.2267 9.64 16.92C9.93333 17.6133 10.3333 18.2133 10.84 18.72C11.3467 19.2 11.9333 19.5867 12.6 19.88C13.2933 20.1467 14.0267 20.28 14.8 20.28C15.7067 20.28 16.5333 20.0933 17.28 19.72C18.0267 19.32 18.6667 18.7867 19.2 18.12H16.8V12.52H27.08V21.4C26.4667 22.4933 25.7333 23.4933 24.88 24.4C24.0267 25.28 23.0667 26.04 22 26.68C20.96 27.32 19.8267 27.8133 18.6 28.16C17.3733 28.5067 16.1067 28.68 14.8 28.68C12.88 28.68 11.0667 28.32 9.36 27.6C7.65333 26.88 6.16 25.8933 4.88 24.64C3.62667 23.3867 2.62667 21.9067 1.88 20.2C1.16 18.4933 0.8 16.6533 0.8 14.68C0.8 12.76 1.14667 10.9467 1.84 9.24C2.53333 7.53333 3.48 6.05333 4.68 4.8C5.90667 3.52 7.34667 2.52 9 1.8C10.68 1.05333 12.48 0.679999 14.4 0.679999C15.8933 0.679999 17.1867 0.826665 18.28 1.12C19.3733 1.41333 20.2933 1.74667 21.04 2.12C21.92 2.54667 22.6533 3.01333 23.24 3.52L18.4 10.4ZM18.8 5.24C18.4533 5.08 18.0667 4.94666 17.64 4.84C17.2667 4.73333 16.8267 4.64 16.32 4.56C15.8133 4.48 15.2533 4.44 14.64 4.44C13.2267 4.44 11.9067 4.69333 10.68 5.2C9.45333 5.70667 8.38667 6.41333 7.48 7.32C6.57333 8.2 5.85333 9.26667 5.32 10.52C4.81333 11.7733 4.56 13.16 4.56 14.68C4.56 16.2 4.82667 17.5867 5.36 18.84C5.89333 20.0933 6.62667 21.1733 7.56 22.08C8.49333 22.96 9.57333 23.6533 10.8 24.16C12.0533 24.6667 13.3867 24.92 14.8 24.92C16.64 24.92 18.3067 24.4933 19.8 23.64C21.2933 22.76 22.5067 21.6 23.44 20.16V14.92H19.2V15.88H22.4V19.88C21.5733 21.1067 20.4933 22.08 19.16 22.8C17.8533 23.52 16.4 23.88 14.8 23.88C13.52 23.88 12.32 23.6667 11.2 23.24C10.1067 22.7867 9.13333 22.16 8.28 21.36C7.45333 20.5333 6.8 19.56 6.32 18.44C5.84 17.2933 5.6 16.04 5.6 14.68C5.6 13.32 5.82667 12.08 6.28 10.96C6.76 9.81333 7.4 8.84 8.2 8.04C9.02667 7.21333 9.98667 6.58667 11.08 6.16C12.1733 5.70667 13.36 5.48 14.64 5.48C15.12 5.48 15.5733 5.52 16 5.6C16.4267 5.68 16.8 5.76 17.12 5.84C17.4933 5.94667 17.84 6.05333 18.16 6.16L18.8 5.24Z"
+                        fill="white" />
+                </svg>
+            </span class="logoname">Project Genie</span>
+        </div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#faq">FAQ</a>
+        </div>
+    </nav>
+
+    <header>
+        <div id="typing-prompt" class="typing-text"></div>
+        <br>
+        <br>
+        <h1>
+            Transform Your
+            <span class="gradient-text" id="animatedText">Learning Journey</span>
+        </h1>
+        <p>Let AI guide your path to becoming an exceptional developer with personalized roadmaps and project ideas.</p>
+        <div class="cta-buttons">
+            <button class="primary-btn"><a href="https://project-genie.streamlit.app/" style="text-decoration:none; color:inherit">Get Started</a></button>
+            <button class="secondary-btn">View Demo</button>
+        </div>
+    </header>
+
+    <section id="features">
+        <h2>Unlock Your Potential</h2>
+        <p>Discover what Project Genie can do for your development journey</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <br>
+                <h3>Smart Analysis</h3>
+                <p>Our AI analyzes your resume to understand your current skill set and experience level, providing
+                    tailored recommendations.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <br>
+                <h3>Personalized Roadmap</h3>
+                <p>Get a customized learning path that adapts to your goals and current expertise level.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <br>
+                <h3>Project Ideas</h3>
+                <p>Receive curated project suggestions that help you practice and showcase your growing skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo">
+        <h2>See It In Action</h2>
+        <p>Watch how Project Genie transforms your career path</p>
+        <div class="demo-container">
+            <video class="demo-video" autoplay loop muted>
+                <source src="video/Screen Recording 2025-02-14 at 5.06.12 PM.mov" type="video/mp4">
+            </video>
+            <div class="demo-image"></div>
+            <div class="demo-image2"><img src="img/e23ea345-adc1-48c4-ad5c-75eac517e1dc.png" class="img2"></div>
+        </div>
+    </section>
+
+
+
+    <section id="faq">
+        <div class="faqimg"><img src="img/Frame 1.png" /></div>
+        <h2 class="fagh1">Frequently Asked Questions</h2>
+        <p class="fagp">Everything you need to know about Project Genie</p>
+        <div class="faq-grid">
+            <div class="faq-card">
+                <div class="faq-icon">❓</div>
+                <h3>How does Project Genie work?</h3>
+                <p>Simply upload your resume and tell us what you want to learn. Our AI analyzes your profile to create
+                    a personalized learning roadmap with project suggestions tailored to your goals.</p>
+            </div>
+            <div class="faq-card">
+                <div class="faq-icon">❓</div>
+                <h3>Is it free to use?</h3>
+                <p>Yes, Project Genie is completely free to use. We believe in making career guidance accessible to
+                    everyone who wants to grow in their development journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Built with ❤️ by <span><a href="https://github.com/vedpawar2254/"
+                    style="text-decoration: none; color: inherit;">Ved</a></span> and <span><a href="https://github.com/Piyush-08-bot"
+                    style=" text-decoration: none; color: inherit;">Piyush</a></span> </p>
+        <a href="https://github.com/vedpawar2254/Projectgenie" target="_blank">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"
+                class="github-icon">
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
 </html>

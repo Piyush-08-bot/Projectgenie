@@ -1,0 +1,439 @@
+@font-face {
+    font-family: 'nb';
+    src: url('/fonts/new/NBInternationalProBoo.ttf');
+}
+
+@font-face {
+    font-family: 'rejoy';
+    src: url('/fonts/new/Rejouice-Headline.ttf');
+}
+
+:root {
+    --primary-color: #9333EA;
+    --secondary-color: #4F46E5;
+    --text-color: #E5E7EB;
+    --background-color: #000000;
+    --card-background: #1F2937;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 8rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+
+.logo {
+    font-family: 'nb';
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background: radial-gradient(circle at center, rgba(147, 51, 234, 0.1) 0%, transparent 70%);
+}
+
+
+
+.typing-text {
+    width: 360px;
+    /* Fixed width */
+    height: 60px;
+    /* Fixed height */
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.85);
+    background: radial-gradient(circle at center, rgba(147, 51, 234, 0.2), rgba(0, 0, 0, 0.9));
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    /* Subtle Inner Glow */
+    box-shadow: inset 0 0 10px rgba(147, 51, 234, 0.4),
+        inset 0 0 20px rgba(147, 51, 234, 0.2);
+
+    /* Soft Text Glow */
+    text-shadow: 0 0 3px rgba(147, 51, 234, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Prevent content from pushing size */
+    white-space: nowrap;
+    /* Keep text on one line */
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.badge {
+    background-color: rgba(147, 51, 234, 0.1);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.gradient-text {
+    font-family: 'nb';
+    background: linear-gradient(45deg, #FFD700, #4F46E5, #00FF00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header p {
+    max-width: 600px;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: #9CA3AF;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.primary-btn {
+    color: rgba(255, 255, 255, 0.85);
+    background: radial-gradient(circle at center, rgba(147, 51, 234, 0.2), rgba(0, 0, 0, 0.9));
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    /* Subtle Inner Glow */
+    box-shadow: inset 0 0 10px rgba(147, 51, 234, 0.4),
+        inset 0 0 20px rgba(147, 51, 234, 0.2);
+
+    /* Soft Text Glow */
+    text-shadow: 0 0 3px rgba(147, 51, 234, 0.5);
+}
+
+.secondary-btn {
+    color: rgba(255, 255, 255, 0.85);
+    background: radial-gradient(circle at center, rgba(226, 226, 226, 0.2), rgba(0, 0, 0, 0.9));
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    /* Subtle Inner Glow */
+    box-shadow: inset 0 0 10px rgba(237, 232, 241, 0.4),
+        inset 0 0 20px rgba(210, 195, 223, 0.2);
+
+    /* Soft Text Glow */
+    text-shadow: 0 0 3px #9a9999;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    transform: translateY(-2px);
+}
+
+#features {
+    padding: 5rem 2rem;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+#features p {
+    color:#9CA3AF
+}
+
+
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 0 1rem;
+}
+
+
+.feature-card {
+    border-radius: 30px;
+    text-align: center;
+    padding: 15px;
+    max-width: 375px;
+    min-height: 210px; /* Increased height */
+    margin: 100px auto;
+    background: #000000;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-in-out;
+    box-shadow: none; /* No glow initially */
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.6), 
+                0 20px 50px rgba(192, 192, 192, 0.4);
+}
+
+/* Styling the icon */
+.feature-icon {
+    font-size: 30px; /* Default size */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Increase the size on hover */
+.feature-card:hover .feature-icon {
+    transform: scale(1.3); /* Makes the icon bigger */
+}
+
+#demo {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.demo-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    /* Increased size */
+    height: 750px;
+    /* Matches image height */
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    /* Ensures video does not overflow */
+}
+
+.demo-video {
+    position: absolute;
+    top: 0;
+    left: 5.5rem;
+    margin-left: .99rem;
+    width: 78%;
+    height: 93%;
+    object-fit: contain;
+    /* Ensures the full video is visible */
+    background-color: black;
+    /* Optional: fills empty space if aspect ratio doesn't match */
+}
+
+.demo-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/845shots_so.png');
+    background-size: contain;
+    /* Adjust to fit the image properly */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 2;
+    /* Ensures the image is on top */
+}
+
+#faq {
+    position: relative;
+    padding: 100px 20px;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* FAQ Background with Radial Gradient */
+.faqimg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send image behind content */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.8) 80%);
+}
+
+.faqimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3; /* Adjust transparency for better readability */
+}
+
+/* FAQ Content */
+.fagh1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.fagp {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 0 1rem;
+}
+
+.faq-card {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.faq-card:hover {
+    transform: translateY(-5px);
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #000000;
+}
+
+.github-icon {
+    width: 24px;
+    height: 24px;
+    margin-top: 1rem;
+    filter: invert(1);
+}
+.img2{
+    width:20rem;
+    display: none;
+    margin:2rem auto;
+
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .demo-image {
+        height: 300px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+
+}
+
+@media (max-width: 1069px) {
+    .demo-container{
+        margin-bottom:-7rem;
+    }
+
+    .demo-video,
+    .demo-image {
+        display: none;
+    }
+
+    .img2{
+        display: block;
+     
+    }
+}
